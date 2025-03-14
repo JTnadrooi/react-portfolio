@@ -1,17 +1,14 @@
-// Variables
 $primary-color: #61dafb;
 $background-color: #282c34;
 $font-color: white;
 $font-size: calc(10px + 2vmin);
 $logo-animation-duration: 20s;
 
-// Mixin for reusable animation
 @mixin logo-spin
 {
     animation: App-logo-spin infinite $logo-animation-duration linear;
 }
 
-// Base Styles
 .App
 {
     text-align: center;
@@ -21,7 +18,6 @@ $logo-animation-duration: 20s;
         height: 40vmin;
         pointer-events: none;
 
-        // Apply animation based on user preferences
         @media (prefers-reduced-motion: no-preference)
         {
             @include logo-spin;
