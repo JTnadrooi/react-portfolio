@@ -1,0 +1,60 @@
+// Variables
+$primary-color: #61dafb;
+$background-color: #282c34;
+$font-color: white;
+$font-size: calc(10px + 2vmin);
+$logo-animation-duration: 20s;
+
+// Mixin for reusable animation
+@mixin logo-spin
+{
+    animation: App-logo-spin infinite $logo-animation-duration linear;
+}
+
+// Base Styles
+.App
+{
+    text-align: center;
+
+    .App-logo
+    {
+        height: 40vmin;
+        pointer-events: none;
+
+        // Apply animation based on user preferences
+        @media (prefers-reduced-motion: no-preference)
+        {
+            @include logo-spin;
+        }
+    }
+
+    .App-header
+    {
+        background-color: $background-color;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: $font-size;
+        color: $font-color;
+    }
+
+    .App-link
+    {
+        color: $primary-color;
+    }
+}
+
+@keyframes App-logo-spin
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
