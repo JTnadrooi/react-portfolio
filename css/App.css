@@ -122,8 +122,6 @@
 }
 @font-face {
   font-family: mainFont;
-  /* src: url('fonts/visitor1.ttf');
-          src: url('fonts/pix3l5.ttf'); */
   src: url("../../fonts/smollerMono.ttf");
 }
 @font-face {
@@ -145,22 +143,21 @@
   color: var(--c1);
   background-color: var(--c2);
   -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility !important;
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   line-height: 16px;
   font-smooth: never;
   text-overflow: ellipsis;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
-*,
-html {
+html,
+* {
   scroll-behavior: smooth !important;
 }
 
@@ -176,10 +173,6 @@ html {
     background-color: inherit;
   }
 }
-html {
-  scroll-behavior: smooth;
-}
-
 #page {
   width: 70%;
   padding: 10px 0;
@@ -198,14 +191,14 @@ html {
 }
 .pageSection:not(#container) {
   border: 16px solid transparent;
-  -o-border-image: url(../../media/border3.png) 25% round;
-     border-image: url(../../media/border3.png) 25% round;
+  -o-border-image: url("../../media/border3.png") 25% round;
+     border-image: url("../../media/border3.png") 25% round;
 }
 
 #jtnadrooi {
   border: 16px solid transparent;
-  -o-border-image: url(../../media/border3.png) 25% round;
-     border-image: url(../../media/border3.png) 25% round;
+  -o-border-image: url("../../media/border3.png") 25% round;
+     border-image: url("../../media/border3.png") 25% round;
   width: 100%;
   margin-bottom: 10px;
   line-height: 100px;
@@ -216,7 +209,7 @@ html {
 
 #container {
   min-width: 200px;
-  padding: 0px;
+  padding: 0;
   display: grid;
   margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -231,8 +224,8 @@ html {
   min-width: initial;
   min-height: initial;
   border: 16px solid transparent;
-  -o-border-image: url(../../media/border.png) 25% round;
-     border-image: url(../../media/border.png) 25% round;
+  -o-border-image: url("../../media/border.png") 25% round;
+     border-image: url("../../media/border.png") 25% round;
   padding: 15px;
   overflow: scroll;
   -ms-overflow-style: none;
@@ -258,10 +251,10 @@ html {
 
 button {
   border: 16px solid transparent;
-  -o-border-image: url(../../media/border3.png) 25% round;
-     border-image: url(../../media/border3.png) 25% round;
+  -o-border-image: url("../../media/border3.png") 25% round;
+     border-image: url("../../media/border3.png") 25% round;
   text-align: center;
-  line-height: 1px;
+  line-height: 1;
   margin-bottom: 10px;
 }
 
@@ -275,7 +268,7 @@ h1 {
 
 img {
   float: left;
-  margin: 0px 10px 0px 0px;
+  margin: 0 10px 0 0;
 }
 img.smallImg {
   width: min(30%, 40px);
@@ -289,8 +282,8 @@ img.screenshot {
   width: 90%;
   height: auto;
   border: 16px solid transparent;
-  -o-border-image: url(../../media/border3.png) 25% round;
-     border-image: url(../../media/border3.png) 25% round;
+  -o-border-image: url("../../media/border3.png") 25% round;
+     border-image: url("../../media/border3.png") 25% round;
 }
 
 ul {

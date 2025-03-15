@@ -1,13 +1,13 @@
-$type: debug;
-$type: nodebug; // comment this line to enable debug mode.
+// Set debug mode (set to true for debug mode)
+$debug: false;
 
+// Import additional modules if needed.
 @use 'crt';
 
+// Font definitions
 @font-face
 {
     font-family: mainFont;
-    /* src: url('fonts/visitor1.ttf');
-            src: url('fonts/pix3l5.ttf'); */
     src: url('../../fonts/smollerMono.ttf');
 }
 
@@ -23,55 +23,63 @@ $type: nodebug; // comment this line to enable debug mode.
     src: url('../../fonts/visitor2.ttf');
 }
 
+// CSS Variables for colors
 :root
 {
     --c1: #f2fbeb;
     --c2: #171219;
 }
 
+// Mixins for borders
 @mixin border
 {
     border: 16px solid transparent;
-    border-image: url(../../media/border.png) 25% round;
+    border-image: url('../../media/border.png') 25% round;
 }
 
 @mixin border3
 {
     border: 16px solid transparent;
-    border-image: url(../../media/border3.png) 25% round;
+    border-image: url('../../media/border3.png') 25% round;
 }
 
+// Debug mixin to conditionally add borders
+@mixin debug-border($color)
+{
+    @if $debug
+    {
+        border: 1px solid $color;
+    }
+}
+
+// Global styles
 *
 {
     font-family: mainFont;
-    // Font does not really support bold letters.
     font-weight: normal;
-    // not exactly black and white as pure monochrome is quite hard on the eyes.
     color: var(--c1);
     background-color: var(--c2);
-    // Hopefully preventing the blurring of low-res fonts. (It didn't but keeping this for good measure)
     -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility !important;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    -webkit-font-smoothing: none;
-    -moz-osx-font-smoothing: grayscale;
-
     font-size: 16px;
     line-height: 16px;
     font-smooth: never;
     text-overflow: ellipsis;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-*,
-html
+html,
+*
 {
     scroll-behavior: smooth !important;
 }
 
+// Flash animation
 .flash
 {
     animation: flash-bg 1s;
@@ -90,39 +98,24 @@ html
     }
 }
 
-html
-{
-    scroll-behavior: smooth;
-}
-
+// Layout styles
 #page
 {
-    @if $type ==debug
-    {
-        border: 1px solid green;
-    }
-
+    @include debug-border(green);
     width: 70%;
-
     padding: 10px 0;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
     overflow: hidden;
 }
 
 .pageSection
 {
-    @if $type ==debug
-    {
-        border: 1px solid yellow;
-    }
-
+    @include debug-border(yellow);
     float: left;
     flex: 1 1 30%;
-
     padding: 10px;
     margin-right: 10px;
 
@@ -145,15 +138,9 @@ html
 
 #container
 {
-    @if $type ==debug
-    {
-        border: 1px solid blue;
-    }
-
+    @include debug-border(blue);
     min-width: 200px;
-
-    padding: 0px;
-
+    padding: 0;
     display: grid;
     margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -167,10 +154,7 @@ html
 {
     min-width: initial;
     min-height: initial;
-    // aspect-ratio: 1;
-
     @include border;
-
     padding: 15px;
     overflow: scroll;
     -ms-overflow-style: none;
@@ -206,9 +190,8 @@ button
 {
     @include border3;
     text-align: center;
-    line-height: 1px;
+    line-height: 1;
     margin-bottom: 10px;
-
 }
 
 h1
@@ -223,7 +206,7 @@ h1
 img
 {
     float: left;
-    margin: 0px 10px 0px 0px;
+    margin: 0 10px 0 0;
 
     &.smallImg
     {
@@ -241,7 +224,7 @@ img
     {
         width: 90%;
         height: auto;
-        @include border3()
+        @include border3;
     }
 }
 
@@ -249,7 +232,6 @@ ul
 {
     margin-left: max(20px, 10%);
     list-style-type: square;
-
 }
 
 #sideView

@@ -1,5 +1,6 @@
 import './scss/App.scss';
 import { useEffect } from "react";
+import Section from './components/Section';
 
 function App() {
 	return (
@@ -20,7 +21,7 @@ function App() {
 				<div id="buttonContainer"></div>
 			</div>
 			<div id="container" className="pageSection">
-				<div id="stolon" className="section large" project="true">
+				<Section id="stolon" dimensions="large" isProject={true}>
 					<img id="stolonFax" src="media/fax_icon2_wide.png" alt="Stolon Fax" />
 					<div>
 						Stolon is a game coded in C# and XNA/Monogame that switches the "Four in a row" formula up a bit.
@@ -33,7 +34,7 @@ function App() {
 						<br /><br />
 						<a href="https://github.com/JTnadrooi/Stolon/releases">Download!</a>
 					</div>
-				</div>
+				</Section>
 				<div id="cirno" className="section high" project="true">
 					<img className="smallImg" src="media/mboLogoPaletteSmall.png" alt="Cirno" />
 					Cirno is a calculator I made for the first school project.
