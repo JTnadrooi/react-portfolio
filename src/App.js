@@ -35,41 +35,51 @@ function App() {
 						<a href="https://github.com/JTnadrooi/Stolon/releases">Download!</a>
 					</div>
 				</Section>
-				<div id="cirno" className="section tall" project="true">
+				
+				<Section id="cirno" dimensions="tall" isProject>
 					<img className="smallImg" src="media/mboLogoPaletteSmall.png" alt="Cirno" />
 					Cirno is a calculator I made for the first school project.
-				</div>
-				<div id="github" className="section">
+				</Section>
+
+				<Section id="github">
 					My Github can be found <a href="https://github.com/JTnadrooi/">here</a>.
-				</div>
-				<div id="asitlib" className="section" project="true">
+				</Section>
+
+				<Section id="asitlib" isProject>
 					An unreleased C# library I use for almost all my C# projects.
-				</div>
-				<div id="yt" className="section">
-					My Youtube can be found <a href="https://www.youtube.com/@jtnadrooi">here</a>.
-				</div>
-				<div id="asitd" className="section" project="true">
+				</Section>
+
+				<Section id="yt">
+					My YouTube can be found <a href="https://www.youtube.com/@jtnadrooi">here</a>.
+				</Section>
+
+				<Section id="asitd" isProject>
 					<img className="smallImg" src="media/docIconSmall.png" alt="ASITD" />
 					".asitd" is a text-based file type useful for reading large amounts of text quickly.
-				</div>
-				<div id="spl" className="section tall" project="true">
+				</Section>
+
+				<Section id="spl" dimensions="tall" isProject>
 					SpellScript is a WIP (uncompiled) scripting language for modular modding support.
-				</div>
-				<div id="contact" className="section">
+				</Section>
+
+				<Section id="contact">
 					Discord: JTnadrooi <br />
 					Github: JTnadrooi <br />
-					Youtube: JTnadrooi <br />
+					YouTube: JTnadrooi <br />
 					Steam: JTnadrooia <br />
-				</div>
-				<div id="asita" className="section wide" project="true">
+				</Section>
+
+				<Section id="asita" dimensions="wide" isProject>
 					<img className="smallImg" src="media/docIconSmall.png" alt="ASITA" />
 					(Discontinued) .asita files were optimized archive files now merged with .asitd.
-				</div>
-				<div id="languages" className="section wide">
+				</Section>
+
+				<Section id="languages" dimensions="wide">
 					All languages I can program in.
-				</div>
-				<div id="programs" className="section">
-					Programs I'm comfortable with using.
+				</Section>
+
+				<Section id="programs">
+					Programs I'm comfortable using.
 					<ul>
 						<li>VSCode</li>
 						<li>Visual Studio</li>
@@ -77,8 +87,9 @@ function App() {
 						<li>LMMS</li>
 						<li>Aseprite</li>
 					</ul>
-				</div>
-				<div id="music" className="section wide">
+				</Section>
+
+				<Section id="music" dimensions="wide">
 					<img className="medImg" src="media/welcome.png" alt="Music" />
 					Music I put on YouTube.
 					<ul>
@@ -86,7 +97,7 @@ function App() {
 							<a href="https://www.youtube.com/watch?v=au9DP92n83k">Stolon OST - Welcome.</a>
 						</li>
 					</ul>
-				</div>
+				</Section>
 			</div>
 		</div>
 	);
