@@ -235,7 +235,7 @@ html,
   grid-column: span 2;
   grid-row: span 2;
 }
-.section.high {
+.section.tall {
   grid-column: span 1;
   grid-row: span 2;
   aspect-ratio: unset;

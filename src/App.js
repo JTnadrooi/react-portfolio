@@ -35,7 +35,7 @@ function App() {
 						<a href="https://github.com/JTnadrooi/Stolon/releases">Download!</a>
 					</div>
 				</Section>
-				<div id="cirno" className="section high" project="true">
+				<div id="cirno" className="section tall" project="true">
 					<img className="smallImg" src="media/mboLogoPaletteSmall.png" alt="Cirno" />
 					Cirno is a calculator I made for the first school project.
 				</div>
@@ -52,7 +52,7 @@ function App() {
 					<img className="smallImg" src="media/docIconSmall.png" alt="ASITD" />
 					".asitd" is a text-based file type useful for reading large amounts of text quickly.
 				</div>
-				<div id="spl" className="section high" project="true">
+				<div id="spl" className="section tall" project="true">
 					SpellScript is a WIP (uncompiled) scripting language for modular modding support.
 				</div>
 				<div id="contact" className="section">
