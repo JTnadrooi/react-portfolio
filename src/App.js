@@ -1,6 +1,7 @@
 import './scss/App.scss';
 import { useEffect } from "react";
 import Section from './components/Section';
+import ImageContainer from './components/ImageContainer';
 
 function App() {
 	return (
@@ -26,16 +27,11 @@ function App() {
 					<div>
 						Stolon is a game coded in C# and XNA/Monogame that switches the "Four in a row" formula up a bit.
 						More info is on the <a href="https://github.com/JTnadrooi/">Github.</a>
-						<br /><br />
-						Screenshots:
-						<img className="screenshot" src="media/Screenshot1.png" alt="Screenshot 1" />
-						<img className="screenshot" src="media/Screenshot2.png" alt="Screenshot 2" />
-						<img className="screenshot" src="media/Screenshot3.png" alt="Screenshot 3" />
-						<br /><br />
+						<ImageContainer headerText="Screenshots" images={["media/Screenshot1.png", "media/Screenshot2.png", "media/Screenshot3.png"]} />
 						<a href="https://github.com/JTnadrooi/Stolon/releases">Download!</a>
 					</div>
 				</Section>
-				
+
 				<Section id="cirno" dimensions="tall" isProject>
 					<img className="smallImg" src="media/mboLogoPaletteSmall.png" alt="Cirno" />
 					Cirno is a calculator I made for the first school project.

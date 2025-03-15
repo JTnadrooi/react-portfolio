@@ -1,10 +1,7 @@
-// Set debug mode (set to true for debug mode)
 $debug: false;
 
-// Import additional modules if needed.
 @use 'crt';
 
-// Font definitions
 @font-face
 {
     font-family: mainFont;
@@ -23,27 +20,24 @@ $debug: false;
     src: url('../../fonts/visitor2.ttf');
 }
 
-// CSS Variables for colors
 :root
 {
     --c1: #f2fbeb;
     --c2: #171219;
 }
 
-// Mixins for borders
 @mixin border
 {
     border: 16px solid transparent;
-    border-image: url('../../media/border.png') 25% round;
+    border-image: url('./../../public/media/border.png') 25% round;
 }
 
 @mixin border3
 {
     border: 16px solid transparent;
-    border-image: url('../../media/border3.png') 25% round;
+    border-image: url('./../../public/media/border3.png') 25% round;
 }
 
-// Debug mixin to conditionally add borders
 @mixin debug-border($color)
 {
     @if $debug
