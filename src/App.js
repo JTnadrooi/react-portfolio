@@ -2,6 +2,7 @@ import './scss/App.scss';
 import { useEffect } from "react";
 import Section from './components/Section';
 import ImageContainer from './components/ImageContainer';
+import List from './components/List';
 
 function App() {
 	return (
@@ -48,7 +49,6 @@ function App() {
 				<Section id="yt">
 					My YouTube can be found <a href="https://www.youtube.com/@jtnadrooi">here</a>.
 				</Section>
-
 				<Section id="asitd" isProject>
 					<img className="smallImg" src="media/docIconSmall.png" alt="ASITD" />
 					".asitd" is a text-based file type useful for reading large amounts of text quickly.
@@ -57,34 +57,24 @@ function App() {
 				<Section id="spl" dimensions="tall" isProject>
 					SpellScript is a WIP (uncompiled) scripting language for modular modding support.
 				</Section>
-
+				{/* 
 				<Section id="contact">
 					Discord: JTnadrooi <br />
 					Github: JTnadrooi <br />
 					YouTube: JTnadrooi <br />
 					Steam: JTnadrooia <br />
-				</Section>
-
+				</Section> */}
 				<Section id="asita" dimensions="wide" isProject>
 					<img className="smallImg" src="media/docIconSmall.png" alt="ASITA" />
 					(Discontinued) .asita files were optimized archive files now merged with .asitd.
 				</Section>
-
 				<Section id="languages" dimensions="wide">
 					All languages I can program in.
 				</Section>
-
 				<Section id="programs">
 					Programs I'm comfortable using.
-					<ul>
-						<li>VSCode</li>
-						<li>Visual Studio</li>
-						<li>FLStudio</li>
-						<li>LMMS</li>
-						<li>Aseprite</li>
-					</ul>
+					<List items={['VSCode', 'Visual Studio', 'FLStudio', 'LMMS', 'Aseprite']} />
 				</Section>
-
 				<Section id="music" dimensions="wide">
 					<img className="medImg" src="media/welcome.png" alt="Music" />
 					Music I put on YouTube.
