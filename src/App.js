@@ -23,7 +23,7 @@ function App() {
 				<div id="buttonContainer"></div>
 			</div>
 			<div id="container" className="pageSection">
-				<Section id="stolon" dimensions="large" isProject={true}>
+				<Section id="stolon" dimensions="large" isProject>
 					<img id="stolonFax" src="media/fax_icon2_wide.png" alt="Stolon Fax" />
 					<div>
 						Stolon is a game coded in C# and XNA/Monogame that switches the "Four in a row" formula up a bit.
