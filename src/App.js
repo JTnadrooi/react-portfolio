@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Section from './components/Section';
 import ImageContainer from './components/ImageContainer';
 import List from './components/List';
+import RecursiveList from './components/RecursiveList';
 
 function App() {
 	const languages = [
@@ -20,7 +21,6 @@ function App() {
 		},
 		{ name: "JavaScript" },
 	];
-
 	return (
 		<div id="page">
 			<div id="overlay" className="crt"></div>
@@ -48,20 +48,16 @@ function App() {
 						<a href="https://github.com/JTnadrooi/Stolon/releases">Download!</a>
 					</div>
 				</Section>
-
 				<Section id="cirno" dimensions="default" isProject>
 					<img className="smallImg" src="media/mboLogoPaletteSmall.png" alt="Cirno" />
 					Cirno is a calculator I made for the first school project.
 				</Section>
-
 				<Section id="github">
 					My Github can be found <a href="https://github.com/JTnadrooi/">here</a>.
 				</Section>
-
 				<Section id="asitlib" isProject>
 					An unreleased C# library I use for almost all my C# projects.
 				</Section>
-
 				<Section id="yt">
 					My YouTube can be found <a href="https://www.youtube.com/@jtnadrooi">here</a>.
 				</Section>
@@ -69,7 +65,6 @@ function App() {
 					<img className="smallImg" src="media/docIconSmall.png" alt="ASITD" />
 					".asitd" is a text-based file type useful for reading large amounts of text quickly.
 				</Section>
-
 				<Section id="spl" dimensions="tall" isProject>
 					SpellScript is a WIP (uncompiled) scripting language for modular modding support.
 				</Section>
@@ -79,20 +74,7 @@ function App() {
 				</Section>
 				<Section id="languages" dimensions="wide">
 					All languages I can program in.
-					<ul>
-						{languages.map((lang, index) => (
-							<li key={index}>
-								{lang.name}
-								{lang.subtopics && (
-									<ul>
-										{lang.subtopics.map((subtopic, subIndex) => (
-											<li key={subIndex}>{subtopic}</li>
-										))}
-									</ul>
-								)}
-							</li>
-						))}
-					</ul>
+					<RecursiveList items={languages} />
 				</Section>
 				<Section id="programs">
 					Programs I'm comfortable using.
