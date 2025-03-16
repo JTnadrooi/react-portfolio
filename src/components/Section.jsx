@@ -1,5 +1,15 @@
 import React from "react";
 
+function scrollToElement(target) {
+    console.log("scrolling to section with id " + target);
+    var element = document.getElementById(target);
+    element.scrollIntoView({ behavior: "smooth" });
+    element.classList.add("flash");
+    setTimeout(() => {
+        element.classList.remove("flash");
+    }, 1000);
+}
+
 export default class Section extends React.Component {
     constructor(props) {
         super(props);
@@ -12,6 +22,7 @@ export default class Section extends React.Component {
         const newButton = Object.assign(document.createElement("button"), {
             innerHTML: `> ${this.props.id}`,
             id: `${this.props.id}Button`,
+            onclick: () => scrollToElement(this.props.id),
         });
 
         // Append button to buttonContainer
