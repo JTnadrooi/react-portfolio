@@ -37,6 +37,10 @@ export default class Section extends React.Component {
                 header,
                 this.sectionRef.current.firstChild
             );
+
+        this.sectionRef.current.addEventListener("click", (event) => {
+            this.sectionRef.current.classList.toggle("expanded");
+        });
     }
 
     componentWillUnmount() {

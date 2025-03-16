@@ -40,13 +40,13 @@
     &.expanded
     {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+        top: 50%;
+        left: 50%;
+        width: 80vw; // Adjust the width as needed (e.g., 70vw for a smaller box)
+        height: 90vh; // Almost full height but not entirely
         z-index: 1000;
         background-color: rgba(0, 0, 0, 0.9);
-        transform: none;
+        transform: translate(-50%, -50%); // Center it properly
     }
 
     *:not(img)

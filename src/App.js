@@ -7,6 +7,20 @@ import RecursiveList from './components/RecursiveList';
 import React from "react";
 
 export default class App extends React.Component {
+	componentDidMount() {
+		document.addEventListener('click', this.handleClickOutside);
+	}
+
+	componentWillUnmount() {
+		document.removeEventListener('click', this.handleClickOutside);
+	}
+
+	handleClickOutside(event) {
+		let expandedSection = document.querySelector('.section.expanded');
+		if (expandedSection && !expandedSection.contains(event.target)) {
+			expandedSection.classList.remove('expanded');
+		}
+	}
 	render() {
 		const languages = [
 			{
