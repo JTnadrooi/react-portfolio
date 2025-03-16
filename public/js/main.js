@@ -44,28 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
             { name: "JavaScript" },
         ];
 
-        sections.forEach(section => {
-            debug.log('\tcreating navigation button..')
-
-            const newButton = Object.assign(document.createElement('button'), {
-                innerHTML: `> ${section.id}`,
-                id: `${section.id}Button`,
-                onclick: () => scrollToElement(section.id)
-            });
-            debug.log('\t\tsucces');
-
-            debug.log('\tcreating header..');
-
-            const isProject = section.hasAttribute('project')
-            buttonContainer.appendChild(newButton);
-            section.insertBefore(Object.assign(document.createElement('h1'), {
-                innerHTML: (isProject ? 'P:' : EMPTY_STRING) + `${section.id.toUpperCase()}`,
-            }), section.firstChild);
-
-
-            debug.log('\tregistered.');
-        });
-
 
         const ul = document.createElement('ul');
 

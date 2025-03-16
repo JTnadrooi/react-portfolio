@@ -33,7 +33,7 @@ function App() {
 					</div>
 				</Section>
 
-				<Section id="cirno" dimensions="tall" isProject>
+				<Section id="cirno" dimensions="default" isProject>
 					<img className="smallImg" src="media/mboLogoPaletteSmall.png" alt="Cirno" />
 					Cirno is a calculator I made for the first school project.
 				</Section>
@@ -57,13 +57,6 @@ function App() {
 				<Section id="spl" dimensions="tall" isProject>
 					SpellScript is a WIP (uncompiled) scripting language for modular modding support.
 				</Section>
-				{/* 
-				<Section id="contact">
-					Discord: JTnadrooi <br />
-					Github: JTnadrooi <br />
-					YouTube: JTnadrooi <br />
-					Steam: JTnadrooia <br />
-				</Section> */}
 				<Section id="asita" dimensions="wide" isProject>
 					<img className="smallImg" src="media/docIconSmall.png" alt="ASITA" />
 					(Discontinued) .asita files were optimized archive files now merged with .asitd.
@@ -78,11 +71,7 @@ function App() {
 				<Section id="music" dimensions="wide">
 					<img className="medImg" src="media/welcome.png" alt="Music" />
 					Music I put on YouTube.
-					<ul>
-						<li>
-							<a href="https://www.youtube.com/watch?v=au9DP92n83k">Stolon OST - Welcome.</a>
-						</li>
-					</ul>
+					<List items={[<a href="https://www.youtube.com/watch?v=au9DP92n83k">Stolon OST - Welcome.</a>]} />
 				</Section>
 			</div>
 		</div>
