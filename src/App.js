@@ -60,7 +60,7 @@ export default class App extends React.Component {
 						<div>
 							Stolon is a game coded in C# and XNA/Monogame that switches the "Four in a row" formula up a bit.
 							More info is on the <a href="https://github.com/JTnadrooi/">Github.</a>
-							<ImageContainer headerText="Screenshots" images={["media/Screenshot1.png", "media/Screenshot2.png", "media/Screenshot3.png"]} />
+							<ImageContainer headerText="Screenshots" className="screenshot" images={["media/Screenshot1.png", "media/Screenshot2.png", "media/Screenshot3.png"]} />
 							<a href="https://github.com/JTnadrooi/Stolon/releases">Download!</a>
 						</div>
 					</Section>

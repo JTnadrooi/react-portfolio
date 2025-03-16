@@ -13,9 +13,9 @@ export default class ImageContainer extends React.Component {
                     this.props.images.map((src, index) => (
                         <img
                             key={index}
-                            className="screenshot"
+                            className={this.props.className}
                             src={src}
-                            alt={`Screenshot ${index + 1}`}
+                            alt={`Image ${index + 1}`}
                         />
                     ))
                 ) : (
