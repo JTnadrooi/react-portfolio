@@ -45,26 +45,26 @@ document.addEventListener("DOMContentLoaded", () => {
         ];
 
 
-        const ul = document.createElement('ul');
+        // const ul = document.createElement('ul');
 
-        languages.forEach((lang) => {
-            const li = document.createElement('li');
-            li.textContent = lang.name;
+        // languages.forEach((lang) => {
+        //     const li = document.createElement('li');
+        //     li.textContent = lang.name;
 
-            if (lang.subtopics) {
-                const subUl = document.createElement('ul');
-                lang.subtopics.forEach((subtopic) => {
-                    const subLi = document.createElement('li');
-                    subLi.textContent = subtopic;
-                    subUl.appendChild(subLi);
-                });
-                li.appendChild(subUl);
-            }
+        //     if (lang.subtopics) {
+        //         const subUl = document.createElement('ul');
+        //         lang.subtopics.forEach((subtopic) => {
+        //             const subLi = document.createElement('li');
+        //             subLi.textContent = subtopic;
+        //             subUl.appendChild(subLi);
+        //         });
+        //         li.appendChild(subUl);
+        //     }
 
-            ul.appendChild(li);
-        });
+        //     ul.appendChild(li);
+        // });
 
-        languagesSection.appendChild(ul);
+        // languagesSection.appendChild(ul);
 
         console.log(sections);
     }, 1000);

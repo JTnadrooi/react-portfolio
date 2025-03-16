@@ -5,6 +5,22 @@ import ImageContainer from './components/ImageContainer';
 import List from './components/List';
 
 function App() {
+	const languages = [
+		{
+			name: "C#/C-Sharp (3.5y)",
+			subtopics: ["XNA", "Monogame", ".Net 6, 7 and 8"],
+		},
+		{ name: "HLSL" },
+		{ name: "BatchScript" },
+		{ name: "SpellScript" },
+		{ name: "HTML" },
+		{
+			name: "CSS",
+			subtopics: ["SASS", "SCSS"],
+		},
+		{ name: "JavaScript" },
+	];
+
 	return (
 		<div id="page">
 			<div id="overlay" className="crt"></div>
@@ -63,6 +79,20 @@ function App() {
 				</Section>
 				<Section id="languages" dimensions="wide">
 					All languages I can program in.
+					<ul>
+						{languages.map((lang, index) => (
+							<li key={index}>
+								{lang.name}
+								{lang.subtopics && (
+									<ul>
+										{lang.subtopics.map((subtopic, subIndex) => (
+											<li key={subIndex}>{subtopic}</li>
+										))}
+									</ul>
+								)}
+							</li>
+						))}
+					</ul>
 				</Section>
 				<Section id="programs">
 					Programs I'm comfortable using.
