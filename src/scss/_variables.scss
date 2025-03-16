@@ -1,0 +1,25 @@
+$debug: false;
+
+@font-face
+{
+    font-family: mainFont;
+    src: url('../../fonts/smollerMono.ttf');
+}
+
+@font-face
+{
+    font-family: headerFont;
+    src: url('../../fonts/smollerMono.ttf');
+}
+
+@font-face
+{
+    font-family: nadrooiFont;
+    src: url('../../fonts/visitor2.ttf');
+}
+
+:root
+{
+    --c1: #f2fbeb;
+    --c2: #171219;
+}

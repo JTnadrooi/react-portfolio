@@ -1,52 +1,8 @@
-$debug: false;
+@use 'components/crt';
+@use 'components/section';
+@use 'mixins' as *;
+@use 'variables' as *;
 
-@use 'crt';
-
-@font-face
-{
-    font-family: mainFont;
-    src: url('../../fonts/smollerMono.ttf');
-}
-
-@font-face
-{
-    font-family: headerFont;
-    src: url('../../fonts/smollerMono.ttf');
-}
-
-@font-face
-{
-    font-family: nadrooiFont;
-    src: url('../../fonts/visitor2.ttf');
-}
-
-:root
-{
-    --c1: #f2fbeb;
-    --c2: #171219;
-}
-
-@mixin border
-{
-    border: 16px solid transparent;
-    border-image: url('./../../public/media/border.png') 25% round;
-}
-
-@mixin border3
-{
-    border: 16px solid transparent;
-    border-image: url('./../../public/media/border3.png') 25% round;
-}
-
-@mixin debug-border($color)
-{
-    @if $debug
-    {
-        border: 1px solid $color;
-    }
-}
-
-// Global styles
 *
 {
     font-family: mainFont;
@@ -73,7 +29,6 @@ html,
     scroll-behavior: smooth !important;
 }
 
-// Flash animation
 .flash
 {
     animation: flash-bg 1s;
@@ -92,7 +47,6 @@ html,
     }
 }
 
-// Layout styles
 #page
 {
     @include debug-border(green);
@@ -144,41 +98,7 @@ html,
     row-gap: 10px;
 }
 
-.section
-{
-    min-width: initial;
-    min-height: initial;
-    @include border;
-    padding: 15px;
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 
-    &.large
-    {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    &.tall
-    {
-        grid-column: span 1;
-        grid-row: span 2;
-        aspect-ratio: unset;
-    }
-
-    &.wide
-    {
-        grid-column: span 2;
-        grid-row: span 1;
-        aspect-ratio: unset;
-    }
-
-    *:not(img)
-    {
-        background-color: transparent;
-    }
-}
 
 button
 {

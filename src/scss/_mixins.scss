@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+@mixin border
+{
+    border: 16px solid transparent;
+    border-image: url('./../../public/media/border.png') 25% round;
+}
+
+@mixin border3
+{
+    border: 16px solid transparent;
+    border-image: url('./../../public/media/border3.png') 25% round;
+}
+
+@mixin debug-border($color)
+{
+    @if $debug
+    {
+        border: 1px solid $color;
+    }
+}
