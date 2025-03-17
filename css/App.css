@@ -151,6 +151,7 @@
 }
 .section:hover {
   transform: scale(1.1) translateY(-5px);
+  cursor: pointer;
 }
 .section.large {
   grid-column: span 2;
@@ -173,6 +174,7 @@
   width: 80vw;
   height: 90vh;
   z-index: 1000;
+  padding-left: 6vw;
   background-color: rgba(0, 0, 0, 0.9);
   transform: translate(-50%, -50%);
 }
@@ -238,7 +240,7 @@ html,
      border-image: url("./../../public/media/border3.png") 25% round;
 }
 
-#jtnadrooi {
+#pageHeader {
   border: 16px solid transparent;
   -o-border-image: url("./../../public/media/border3.png") 25% round;
      border-image: url("./../../public/media/border3.png") 25% round;
@@ -298,6 +300,9 @@ img.screenshot {
   border: 16px solid transparent;
   -o-border-image: url("./../../public/media/border3.png") 25% round;
      border-image: url("./../../public/media/border3.png") 25% round;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ul {

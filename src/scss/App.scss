@@ -73,7 +73,7 @@ html,
     }
 }
 
-#jtnadrooi
+#pageHeader
 {
     @include border3;
     width: 100%;
@@ -139,6 +139,9 @@ img
         width: 90%;
         height: auto;
         @include border3;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

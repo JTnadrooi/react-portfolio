@@ -16,6 +16,7 @@
     &:hover
     {
         transform: scale(1.1) translateY(-5px);
+        cursor: pointer;
     }
 
     &.large
@@ -43,11 +44,12 @@
         position: fixed;
         top: 50%;
         left: 50%;
-        width: 80vw; // Adjust the width as needed (e.g., 70vw for a smaller box)
-        height: 90vh; // Almost full height but not entirely
+        width: 80vw; 
+        height: 90vh; 
         z-index: 1000;
+        padding-left: 6vw; // should be so its content becomes centered
         background-color: rgba(0, 0, 0, 0.9);
-        transform: translate(-50%, -50%); // Center it properly
+        transform: translate(-50%, -50%); 
     }
 
     *:not(img)

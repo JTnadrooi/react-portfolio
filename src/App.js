@@ -4,6 +4,7 @@ import Section from './components/Section';
 import ImageContainer from './components/ImageContainer';
 import List from './components/List';
 import RecursiveList from './components/RecursiveList';
+import PageHeader from './components/PageHeader';
 import React from "react";
 
 export default class App extends React.Component {
@@ -16,10 +17,7 @@ export default class App extends React.Component {
 	}
 
 	handleClickOutside(event) {
-		let expandedSection = document.querySelector('.section.expanded');
-		if (expandedSection && !expandedSection.contains(event.target)) {
-			expandedSection.classList.remove('expanded');
-		}
+
 	}
 	render() {
 		const languages = [
@@ -40,10 +38,11 @@ export default class App extends React.Component {
 		return (
 			<div id="page">
 				<div id="overlay" className="crt"></div>
-				<div id="jtnadrooi">
-					JTNADROOI
-					<div>Is how I'm called.</div>
-				</div>
+				<PageHeader />
+				{/* <div id="jtnadrooi">
+					JORDAN
+					<div>Is my name.</div>
+				</div> */}
 				<div id="sideView" className="pageSection">
 					<h1>PAGE INFO</h1>
 					<ul>

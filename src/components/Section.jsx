@@ -15,6 +15,7 @@ export default class Section extends React.Component {
         super(props);
         this.sectionRef = React.createRef();
         this.headerId = `${this.props.id}-header`;
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
@@ -38,9 +39,7 @@ export default class Section extends React.Component {
                 this.sectionRef.current.firstChild
             );
 
-        this.sectionRef.current.addEventListener("click", (event) => {
-            this.sectionRef.current.classList.toggle("expanded");
-        });
+        this.sectionRef.current.addEventListener("click", this.handleClick);
     }
 
     componentWillUnmount() {
@@ -49,6 +48,12 @@ export default class Section extends React.Component {
 
         const header = document.getElementById(this.headerId);
         if (header) header.remove();
+        this.sectionRef.current.removeEventListener("click", this.handleClick);
+    }
+
+    handleClick(event) {
+        console.log("clicked");
+        this.sectionRef.current.classList.toggle("expanded");
     }
 
     render() {
