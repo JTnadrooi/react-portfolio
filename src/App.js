@@ -38,11 +38,7 @@ export default class App extends React.Component {
 		return (
 			<div id="page">
 				<div id="overlay" className="crt"></div>
-				<PageHeader />
-				{/* <div id="jtnadrooi">
-					JORDAN
-					<div>Is my name.</div>
-				</div> */}
+				<PageHeader userName={true} />
 				<div id="sideView" className="pageSection">
 					<h1>PAGE INFO</h1>
 					<ul>

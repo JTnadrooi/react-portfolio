@@ -3,8 +3,17 @@ export default class PageHeader extends React.Component {
     render() {
         return (
             <div id="pageHeader">
-                JORDAN
-                <div>Is my name.</div>
+                {this.props.userName === true ? (
+                    <>
+                        JTNADROOI
+                        <div>Is how I'm called.</div>
+                    </>
+                ) : (
+                    <>
+                        JORDAN
+                        <div>Is my name.</div>
+                    </>
+                )}
             </div>
         );
     }
