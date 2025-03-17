@@ -38,7 +38,7 @@ export default class App extends React.Component {
 		return (
 			<div id="page">
 				<div id="overlay" className="crt"></div>
-				<PageHeader userName={true} />
+				<PageHeader userName={false} />
 				<div id="sideView" className="pageSection">
 					<h1>PAGE INFO</h1>
 					<ul>
@@ -84,7 +84,7 @@ export default class App extends React.Component {
 						(Discontinued) .asita files were optimized archive files now merged with .asitd.
 					</Section>
 					<Section id="languages" dimensions="wide">
-						All languages I can program in.
+						Programminglanguages I'm familiar with.
 						<RecursiveList items={languages} />
 					</Section>
 					<Section id="programs">
